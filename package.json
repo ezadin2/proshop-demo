@@ -1,0 +1,32 @@
+{
+  "name": "proshop-v2",
+  "version": "2.0.0",
+  "description": "ecommerce application built with mern stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "dev": "node -e \"require('child_process').spawn('npm', ['run', 'server'], { stdio: 'inherit', shell: true }); require('child_process').spawn('npm', ['run', 'client'], { stdio: 'inherit', shell: true });\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "author": "Ezadin Badiru",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  }
+}
